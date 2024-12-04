@@ -16,7 +16,7 @@
 #include <string>
 #include <cuda_runtime.h>
 #include <sstream>
-#include <math_functions.h>  // CUDA's Math Library
+#include <math_functions.h>  // CUDA Math Library
 
 
 
