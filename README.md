@@ -1,5 +1,5 @@
 # ProjectCUDAcourse
-Angle of Polarization using NVIDIA NPP with CUDA
+Angle of Polarization using CUDA
 
 ## Overview
 This project demonstrates the use of CUDA to compute the polarization angle in images acquired with a polarization camera. 
