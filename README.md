@@ -1,9 +1,9 @@
 # ProjectCUDAcourse
-Angle of Polarization using CUDA
+Polarization images proccessing using CUDA
 
 ## Overview
-This project demonstrates the use of CUDA to compute the polarization angle in images acquired with a polarization camera and saved in .bmp format. 
-The goal is to utilize GPU acceleration to efficiently perform the computation. The project is a part of the CUDA at Scale for the Enterprise course. 
+This project demonstrates the use of CUDA to perform post-processing on images acquired with a polarization camera and saved in .bmp format. 
+The goal is to utilize GPU acceleration to efficiently perform the computation of the polarization angle or of the FFT. The project is a part of the GPU Programming Specialization course. 
 ## Key Concepts
 Performance Strategies, Image Processing, Polarization Camera
 ## Supported OSes
