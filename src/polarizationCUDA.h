@@ -15,13 +15,17 @@
 #include <vector>
 #include <string>
 #include <cuda_runtime.h>
+#include <cufft.h>
 #include <sstream>
-#include <math_functions.h>  // CUDA Math Library
+#include <math_functions.h>  // CUDA's Math Library
 
 
-
-void processImages(const std::string& inputPath, const std::string& outputPath);
+void processImages(const std::string& inputPath, const std::string& outputPath, const std::string& outputPathFFT, bool computeAngle);
 void loadImageToGPU(const std::string filePath, unsigned char** d_image, int* width, int* height);
-void saveGPUimage(const std::string& filePath, unsigned char* d_image, int width, int height);
+void saveImage(const std::string& filePath, unsigned char* d_image, int width, int height);
+void saveFFT(const std::string& filePath, float* d_image, int FFT_OUT_SIZE, int width, int height);
 __global__ void polarizationAngle(unsigned char* d_input, unsigned char* d_output, int width, int height);
+__global__ void intensityFromRaw(unsigned char* d_input, unsigned char* d_output, float* d_intensity, int width, int height, int crop_x, int crop_y, int side);
+__global__ void computeMagnitude(const cufftComplex* input, float* output, int size);
+
 #endif // POLARIZATIONCUDA_H
